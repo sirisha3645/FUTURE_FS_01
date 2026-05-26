@@ -483,19 +483,20 @@ img {
 .edu-card .school { font-weight: 600; margin: 5px 0; }
 .edu-card .year { color: var(--text-muted); font-size: 0.9rem; }
 
-/* Centering the Contact Section */
+/* --- Contact Section & Form --- */
 .contact .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* This centers the heading and the cards */
-    text-align: center;
+    align-items: center;
 }
 
 .contact-wrapper {
-    display: flex;
-    justify-content: center; /* This centers the items horizontally */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* This puts Info on the Left, Form on the Right */
+    gap: 40px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
+    align-items: start;
 }
 
 .contact-info {
@@ -503,26 +504,24 @@ img {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 500px; /* Limits width so it stays neat and centered */
 }
 
 .info-card {
     display: flex;
     align-items: center;
-    text-align: left; /* Keeps text inside the card clean */
     gap: 20px;
     background: var(--bg-card);
     padding: 20px 25px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
-    width: 100%;
 }
 
 .info-card:hover {
     border-color: var(--primary-color);
     transform: translateY(-5px);
 }
+
 .info-card i {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -531,27 +530,49 @@ img {
     border-radius: 50%;
 }
 
-.info-card h4 {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    margin-bottom: 5px;
+/* New Form Container Styles */
+.contact-form-container {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
-.contact-form .form-group { margin-bottom: 20px; }
 
-.contact-form input, .contact-form textarea {
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
     width: 100%;
     padding: 15px;
-    background: var(--bg-card);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(15, 5, 29, 0.5); /* Slightly darker for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: white;
+    font-family: 'Poppins', sans-serif;
     outline: none;
+    transition: var(--transition);
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus, 
+.contact-form textarea:focus {
     border-color: var(--primary-color);
+    background: rgba(157, 80, 187, 0.05);
 }
 
+.contact-form .btn {
+    width: 100%; /* Makes button full width of the form */
+    border: none;
+}
+
+/* Mobile Fix: Stacks Info and Form on small screens */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
 /* --- Footer --- */
 footer {
     padding: 50px 0;
