@@ -483,40 +483,46 @@ img {
 .edu-card .school { font-weight: 600; margin: 5px 0; }
 .edu-card .year { color: var(--text-muted); font-size: 0.9rem; }
 
-/* --- Contact Form --- */
-/* Centered Contact Info */
-.contact-wrapper.centered-info {
+/* Centering the Contact Section */
+.contact .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* This centers the heading and the cards */
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center; /* This centers the items horizontally */
     width: 100%;
+    margin-top: 20px;
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 500px; /* Limits the width so it looks neat */
+    max-width: 500px; /* Limits width so it stays neat and centered */
 }
 
 .info-card {
     display: flex;
     align-items: center;
+    text-align: left; /* Keeps text inside the card clean */
     gap: 20px;
     background: var(--bg-card);
-    padding: 25px;
+    padding: 20px 25px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
+    width: 100%;
 }
 
 .info-card:hover {
     border-color: var(--primary-color);
     transform: translateY(-5px);
-    background: rgba(157, 80, 187, 0.1);
 }
-
 .info-card i {
     font-size: 1.5rem;
     color: var(--primary-color);
