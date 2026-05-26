@@ -530,6 +530,17 @@ img {
     color: var(--primary-color);
     margin-bottom: 5px;
 }
+.contact-form .form-group { margin-bottom: 20px; }
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}
 
 .contact-form input:focus, .contact-form textarea:focus {
     border-color: var(--primary-color);
