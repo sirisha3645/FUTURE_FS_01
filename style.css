@@ -484,34 +484,51 @@ img {
 .edu-card .year { color: var(--text-muted); font-size: 0.9rem; }
 
 /* --- Contact Form --- */
-.contact-wrapper {
+/* Centered Contact Info */
+.contact-wrapper.centered-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-info {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 50px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px; /* Limits the width so it looks neat */
 }
 
 .info-card {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     background: var(--bg-card);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 15px;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
 }
 
-.info-card i { color: var(--primary-color); }
+.info-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    background: rgba(157, 80, 187, 0.1);
+}
 
-.contact-form .form-group { margin-bottom: 20px; }
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
+.info-card i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: rgba(157, 80, 187, 0.1);
     padding: 15px;
-    background: var(--bg-card);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 10px;
-    color: white;
-    outline: none;
+    border-radius: 50%;
+}
+
+.info-card h4 {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
