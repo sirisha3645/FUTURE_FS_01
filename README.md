@@ -1,7 +1,7 @@
 Welcome to my professional portfolio website! This project was built to showcase my journey as a Software Engineer, my technical skills, and the projects I've worked on. This is the official submission for **Task 1** of my Full Stack Web Development internship.
 
 ## 🔗 Live Demo
-Check out the live site here: https://sirisha3645.github.io/FUTURE_FS_01/](https://sirisha3645.github.io/FUTURE_FS_01/)
+Check out the live site here: https://sirisha3645.github.io/FUTURE_FS_01/
 
 ---
 
