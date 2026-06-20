@@ -627,6 +627,7 @@ footer {
 
 /* --- Mobile Responsive --- */
 @media (max-width: 768px) {
+    /* Navigation */
     .nav-links {
         position: fixed;
         top: 0; right: -100%;
@@ -641,6 +642,7 @@ footer {
     .nav-links.active { right: 0; }
     .hamburger { display: block; }
     
+    /* Hero Section */
     .hero .container { grid-template-columns: 1fr; text-align: center; }
     .hero-content { order: 2; }
     .hero-image { order: 1; display: flex; justify-content: center; }
@@ -649,6 +651,26 @@ footer {
     .hero-btns { justify-content: center; }
     .social-links { justify-content: center; }
     
-    .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+    /* About & Contact Layout - Stacking Columns */
+    .about-grid, .contact-wrapper { 
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    /* Contact Form Specific Mobile Adjustments */
+    .contact-info {
+        order: 2; /* Shows info cards after the form on mobile */
+    }
+
+    .contact-form-container {
+        order: 1; /* Shows the form first on mobile */
+        padding: 20px; /* Reduces padding so it fits narrow screens */
+    }
+
+    .info-card {
+        padding: 15px; /* Makes contact cards slightly smaller for mobile */
+        gap: 15px;
+    }
+
     .hero-content h1 { font-size: 2.5rem; }
 }
